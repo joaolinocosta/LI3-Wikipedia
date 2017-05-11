@@ -66,5 +66,5 @@ public class Contributor
     public Contributor clone()
     {
         return new Contributor(this);
-    } 	
+    }	
 }

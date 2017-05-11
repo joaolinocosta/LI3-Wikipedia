@@ -7,6 +7,7 @@ public class IStruct
 	private HashMap<Long, Contributor> contributorHashTable;
 
 
+
 	public IStruct()
 	{
 		this.articlesHashTable = new HashMap<Long, Article>();
@@ -59,4 +60,28 @@ public class IStruct
     {
         return new IStruct(this);
     }
+
+
+    public void insertArticle(Article a)
+    {
+    	this.articlesHashTable.put(a.getId(), a);
+    }
+
+
+    public boolean searchArticle(Article a)
+    {
+    	return this.articlesHashTable.containsKey(a.getId());
+    }
+
+
+    public void insertContributor(Contributor c)
+    {
+    	this.contributorHashTable.put(c.getId(), c);
+    }
+
+
+    public boolean searchContributor(Contributor c)
+    {
+    	return this.contributorHashTable.containsKey(c.getId());
+    } 
 }
