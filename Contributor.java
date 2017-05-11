@@ -39,5 +39,32 @@ public class Contributor
 
 	public void setId(long pId)									{ this.id = pId; 							}
 	public void setNContributions(long pNContributions) 		{ this.nContributions = pNContributions; 	}
-	public void setContributorName(String pContributorName) 	{ this.contributorName = pContributorName; 	} 	
+	public void setContributorName(String pContributorName) 	{ this.contributorName = pContributorName; 	}
+
+
+	public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        } 
+        
+        if (o == null) {
+            return false;
+        }
+        
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+        
+        Contributor c = (Contributor) o;
+        return this.id.equals(c.getId())
+            && this.nContributions.equals(c.getNContributions())
+            && this.contributorName.equals(c.getContributorName());
+    }
+
+
+    public Contributor clone()
+    {
+        return new Contributor(this);
+    } 	
 }
