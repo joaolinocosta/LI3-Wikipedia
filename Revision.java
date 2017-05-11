@@ -1,4 +1,7 @@
+//package blog.commons;
+
 import java.util.*;
+//import org.apache.commons.lang.builder.EqualsBuilder;
 
 
 public class Revision
@@ -33,6 +36,7 @@ public class Revision
 	}
 
 
+	 
 	public long getId()				{ return this.id; 			}
 	public long getNRevisions() 	{ return this.nRevisions; 	}
 	public String getTimestamp() 	{ return this.timestamp; 	}
